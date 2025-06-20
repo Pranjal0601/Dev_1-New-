@@ -8,7 +8,6 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, create_eng
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship, Session
 from passlib.context import CryptContext
 
-DATABASE_URL = "postgresql://username:password@localhost/dbname"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit = False, autoflush = False, bind = engine)
 Base = declarative_base()
